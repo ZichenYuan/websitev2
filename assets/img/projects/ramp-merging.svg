@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b3a2e"/><stop offset="1" stop-color="#1fbf8f"/></linearGradient>
+  <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="1"/></pattern>
+  <radialGradient id="glow" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#g)"/>
+<rect width="1600" height="900" fill="url(#grid)"/>
+<rect width="1600" height="900" fill="url(#glow)"/>
+<text x="90" y="170" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="54" fill="#fff" fill-opacity=".55" letter-spacing="6">005</text>
+<g transform="translate(1180 420) scale(1.7)" fill="#fff" fill-opacity=".9"><path d="M20 110 L50 -110 H100 L130 110 Z"/><rect x="70" y="-90" width="10" height="30" fill="#000" opacity=".35"/><rect x="70" y="-40" width="10" height="30" fill="#000" opacity=".35"/><rect x="70" y="10" width="10" height="30" fill="#000" opacity=".35"/><rect x="70" y="60" width="10" height="30" fill="#000" opacity=".35"/></g>
+<text x="90" y="560" font-family="Poppins, Raleway, Helvetica, Arial, sans-serif" font-weight="700" font-size="84" fill="#fff">Autonomous</text><text x="90" y="656" font-family="Poppins, Raleway, Helvetica, Arial, sans-serif" font-weight="700" font-size="84" fill="#fff">Ramp-Merging</text>
+<text x="90" y="802" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="34" fill="#fff" fill-opacity=".8" letter-spacing="4">DEEP RL · DQN</text>
+</svg>

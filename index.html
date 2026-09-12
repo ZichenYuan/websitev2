@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sunny Yuan — ML Systems Engineer</title>
+  <meta name="description" content="Sunny Yuan — software engineer building the GPU/accelerator substrate AI runs on. Kubernetes, Go, GPU systems, and reinforcement learning — now pushing into Physical AI, robotics, and edge computing.">
+  <meta name="keywords" content="Sunny Yuan, Zichen Yuan, ML systems, GPU infrastructure, Kubernetes, reinforcement learning, robotics, Physical AI">
+  <meta property="og:title" content="Sunny Yuan — ML Systems Engineer">
+  <meta property="og:description" content="I build the substrate AI runs on — from PCI passthrough and the Kubernetes device-plugin stack up to vLLM serving — and I'm moving into RL training infrastructure and Physical AI on edge hardware.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS (cdnjs) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    /* sidebar avatar: face crop of the full portrait */
+    #header .profile .avatar { width: 120px; height: 120px; margin: 15px auto; border-radius: 50%; overflow: hidden; border: 8px solid #2c2f3f; position: relative; }
+    #header .profile .avatar img { position: absolute; width: 241px; height: auto; max-width: none; left: -69px; top: -176px; margin: 0; border: 0; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header / Sidebar ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <div class="avatar"><img src="https://raw.githubusercontent.com/ZichenYuan/sunny.0/main/assets/portrait.jpg" alt="Sunny Yuan"></div>
+        <h1 class="text-light"><a href="index.html">Sunny</a></h1>
+        <h1 class="text-light"><a href="index.html">Yuan</a></h1>
+        <p class="tagline">ML Systems Engineer</p>
+        <div class="social-links mt-3 text-center">
+          <a href="https://github.com/ZichenYuan" target="_blank" rel="noopener" class="github" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/sunny-yuan-1ae/" target="_blank" rel="noopener" class="linkedin" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://x.com/ZCY2003" target="_blank" rel="noopener" class="twitter" aria-label="X / Twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="mailto:hello@sunnyyuan.dev" class="email" aria-label="Email"><i class="bx bx-envelope"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experience</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="credits">
+        Designed by<br>
+        <a href="https://github.com/ZichenYuan" target="_blank" rel="noopener">Sunny Yuan</a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Sunny Yuan</h1>
+      <p><span class="typed" data-typed-items="Engineer., Builder., Endlessly Curious."></span></p>
+      <div class="hero-meta">
+        <span>Now <b>Microsoft Azure</b></span><span class="sep">|</span>
+        <span>Base <b>Seattle, WA</b></span><span class="sep">|</span>
+        <span>Edu <b>WashU</b></span>
+      </div>
+      <a href="#portfolio" class="btn-hero scrollto">Selected Work</a>
+      <a href="mailto:hello@sunnyyuan.dev" class="btn-hero outline">Get in Touch</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div class="intro" data-aos="fade-up">
+          <p>Hi there! I'm a <b>builder at heart</b> — happiest turning hard problems into things that actually work. I love going deep, learning fast, and making stuff at the <b>frontier of AI</b> — lately that means <b>robots and the edge hardware they run on</b>.</p>
+          <p>I'm a software engineer at <b>Microsoft Azure</b>, where I ship GPU/accelerator enablement for a managed Kubernetes platform running at carrier scale — the kind of low-level systems work that lets customers run real <b>AI workloads</b>.</p>
+          <p>My edge is range: I work from <b>Linux kernel drivers and PCI passthrough</b> up through Go control planes and Kubernetes operators — and I round it out with hands-on <b>reinforcement learning</b> research, including a Stanford study on <b>reward hacking in robotic manipulation</b>. That combination is pulling me toward <b>Physical AI and edge computing</b> — extending the RL work into real robot hardware, and bringing the same systems instincts I use for GPU infrastructure to bear on robots and the constrained hardware they run on. You can see what I've built in the <a href="#portfolio" class="scrollto">projects section</a>.</p>
+          <p>Status: <b>open to what's next.</b></p>
+        </div>
+
+        <div class="photo-strip" data-aos="fade-up" data-aos-delay="100">
+          <figure>
+            <img src="https://raw.githubusercontent.com/ZichenYuan/sunny.0/main/assets/portrait.jpg" alt="Sunny Yuan on campus in autumn" loading="lazy" style="object-position: 50% 55%;">
+            <figcaption>Fig. 01 — Sunny</figcaption>
+          </figure>
+          <figure class="art">
+            <img src="assets/img/rower.svg" alt="Illustration of Sunny rowing a boat at sunset" loading="lazy">
+            <figcaption>Fun fact — I row 🚣</figcaption>
+          </figure>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-chip"></i></div>
+              <div>
+                <h4>Infrastructure</h4>
+                <p>GPU/accelerator enablement end-to-end: Linux drivers, PCI passthrough (VFIO/IOMMU), the Kubernetes device-plugin stack, and Go control planes on controller-runtime — validated against live vLLM inference workloads.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bot"></i></div>
+              <div>
+                <h4>Research</h4>
+                <p>Reinforcement learning for robotic manipulation — a Stanford CS224R study on reward hacking in LLM-generated rewards, plus diffusion models, NeRF/3D Gaussian Splatting, and vision-language models.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-book-open"></i></div>
+              <div>
+                <h4>Education</h4>
+                <p>B.S. at Washington University in St. Louis — Computer Science, Mathematics, and Financial Engineering. Graduate coursework at Stanford: CS224R Deep Reinforcement Learning and CS230 Deep Learning.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chips" data-aos="fade-up" data-aos-delay="200">
+          <span>Go</span><span>Kubernetes</span><span>GPU / CUDA systems</span><span>PCI passthrough · VFIO</span><span>vLLM</span><span>PyTorch · RL</span><span>Distributed systems</span><span>Physical AI · VLA</span><span>Edge computing (Jetson)</span><span>Robotics</span>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Experience Section ======= -->
+    <section id="resume" class="resume section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Experience</h2>
+          <p class="lead-in">Below is my employment history, in reverse chronological order.</p>
+        </div>
+
+        <div class="timeline">
+
+          <div class="resume-item flip">
+            <div class="card-side" data-aos="fade-left">
+              <h4>Software Engineer — Cloud-Native &amp; GPU Infra</h4>
+              <h5 class="org">Microsoft · Azure Edge</h5>
+              <span class="date">Jul 2025 – Present</span>
+              <div class="where">Hybrid-cloud infrastructure on the Edge (Kubernetes) · Redmond, WA</div>
+              <ul>
+                <li>Drove <b>GPU/accelerator enablement end-to-end</b> for a managed Kubernetes platform — Linux drivers, <b>PCI passthrough (VFIO/IOMMU)</b>, the K8s device-plugin stack, and the NVIDIA GPU Operator — validated against a live <b>vLLM</b> inference workload.</li>
+                <li>Built Go control-plane features on <b>controller-runtime</b>: admission/validation webhooks, GPU capacity gating, and hardware-aware scheduling.</li>
+                <li>Led cluster <b>upgrade-reliability</b> and <b>CI/CD release-safety</b> automation for a platform supporting carrier scale (100M+ subscribers).</li>
+                <li>Hardened the GPU <b>container-image supply chain</b> end-to-end — CVE scanning &amp; remediation, <b>signed / SBOM-attested images</b>, base-image patching, and mirroring into a compliant internal registry; ran on-call incident response and built reusable triage tooling.</li>
+                <li>Designed and shipped <b>internal AI developer tooling</b> adopted across the org — customized <b>Copilot/Claude agents</b>, reusable <b>skills &amp; MCP plugins</b>, and opinionated agent <b>workflows/frameworks</b> for code review, on-call triage, and repo-aware Q&amp;A.</li>
+              </ul>
+            </div>
+            <div class="art-side" data-aos="fade-right">
+              <div class="org-art" data-label="Azure · GPU infra"><i class="bx bxl-microsoft"></i></div>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="card-side" data-aos="fade-right">
+              <h4>Software Engineer Intern</h4>
+              <h5 class="org">Microsoft · Azure Edge &amp; Platform</h5>
+              <span class="date">May 2024 – Aug 2024</span>
+              <div class="where">Kubernetes · Docker · cloud-native systems</div>
+              <ul>
+                <li>Built <b>Azure Relay Bridge</b> — a tool that lets on-premises applications securely connect to the public cloud without a VPN — using Azure Relay, bidirectional TCP tunnels over WebSockets, and a microservices stack on Docker and Kubernetes.</li>
+                <li>Integrated observability with <b>OpenTelemetry</b> and <b>Prometheus</b> to improve system visibility and reliability.</li>
+              </ul>
+            </div>
+            <div class="art-side" data-aos="fade-left">
+              <div class="org-art" data-label="Azure Relay Bridge"><i class="bx bx-cloud"></i></div>
+            </div>
+          </div>
+
+          <div class="resume-item flip">
+            <div class="card-side" data-aos="fade-left">
+              <h4>Team Lead — AI &amp; Robotics</h4>
+              <h5 class="org">WashU Robotics Club</h5>
+              <span class="date">2023 – 2024</span>
+              <div class="where">Reinforcement learning · computer vision</div>
+              <ul>
+                <li>Led the AI &amp; Robotics team, driving projects in <b>reinforcement learning</b> and <b>computer vision</b> — early grounding for my RL focus.</li>
+              </ul>
+            </div>
+            <div class="art-side" data-aos="fade-right">
+              <div class="org-art ember" data-label="Robotics"><i class="bx bx-bot"></i></div>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="card-side" data-aos="fade-right">
+              <h4>Teaching Assistant</h4>
+              <h5 class="org">Washington University in St. Louis</h5>
+              <span class="date">2023 – 2024</span>
+              <div class="where">CSE department · part-time</div>
+              <ul>
+                <li>TA for <b>CSE 247</b> (Data Structures &amp; Algorithms), <b>CSE 231</b> (Parallel &amp; Concurrent Programming), and <b>CSE 417</b> (Machine Learning).</li>
+              </ul>
+            </div>
+            <div class="art-side" data-aos="fade-left">
+              <div class="org-art green" data-label="Teaching"><i class="bx bx-chalkboard"></i></div>
+            </div>
+          </div>
+
+          <div class="resume-item flip">
+            <div class="card-side" data-aos="fade-left">
+              <h4>Software Engineer Intern</h4>
+              <h5 class="org">Less Annoying CRM</h5>
+              <span class="date">May 2023 – Aug 2023</span>
+              <div class="where">Full-stack · CI/CD · MySQL</div>
+              <ul>
+                <li>Built and shipped product features end-to-end, working across <b>CI/CD</b> pipelines and <b>MySQL</b>-backed services.</li>
+                <li>Designed API endpoints and optimized database queries for performance and scalability.</li>
+              </ul>
+            </div>
+            <div class="art-side" data-aos="fade-right">
+              <div class="org-art purple" data-label="Full-stack"><i class="bx bx-code-alt"></i></div>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="card-side" data-aos="fade-right">
+              <h4>Product Intern</h4>
+              <h5 class="org">MarginNote</h5>
+              <span class="date">2021</span>
+              <div class="where">e-reader for Mac · iPad · iPhone</div>
+              <ul>
+                <li>Contributed to product management and cross-functional delivery for a study-focused e-reader (annotation, mind-mapping, flashcards).</li>
+              </ul>
+            </div>
+            <div class="art-side" data-aos="fade-left">
+              <div class="org-art ember" data-label="Product"><i class="bx bx-book-reader"></i></div>
+            </div>
+          </div>
+
+        </div><!-- End timeline -->
+
+        <h3 class="edu-title" data-aos="fade-up">Education &amp; Leadership</h3>
+        <div class="row gy-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="edu-card">
+              <h4>Washington University in St. Louis</h4>
+              <div class="sub">B.S. Double Major</div>
+              <p>Computer Science · Mathematics · Financial Engineering</p>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="edu-card">
+              <h4>Stanford University</h4>
+              <div class="sub">Graduate coursework in AI &amp; Robotics</div>
+              <ul>
+                <li><b>CS224R — Deep Reinforcement Learning</b> (Prof. Chelsea Finn): SAC, PPO/TRPO, offline RL (IQL, CQL), and RLHF-style alignment. Final project: <a href="https://github.com/ZichenYuan/sunny.0/raw/main/assets/cs224r_final_report.pdf" target="_blank" rel="noopener">"Physics-Blind Reward Hacking"</a>.</li>
+                <li><b>CS230 — Deep Learning</b> (Prof. Andrew Ng): CNNs, sequence models, optimization, and modern deep-learning architectures.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="edu-card">
+              <h4>Leadership &amp; Fellowships</h4>
+              <div class="sub">2021 – 2025</div>
+              <ul class="lead-list">
+                <li><span><b>President</b> · WashU Women in Computer Science</span><span class="yr">2024–25</span></li>
+                <li><span><b>McKelvey Build Fellow</b> · McKelvey Fellowship</span><span class="yr">2024–25</span></li>
+                <li><span><b>Venture Fellow</b> · Laconia, Cohort #5</span><span class="yr">2023</span></li>
+                <li><span><b>Insight Series</b> · Goldman Sachs</span><span class="yr">2023</span></li>
+                <li><span><b>Intern</b> · EDUrain (React · Firebase)</span><span class="yr">2023</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Experience Section -->
+
+    <!-- ======= Projects Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>Below are the projects I've created, or co-created, over the past few years. Click the link icon on each to read more about the project.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-robotics">Robotics &amp; RL</li>
+              <li data-filter=".filter-vision">Computer Vision &amp; 3D</li>
+              <li data-filter=".filter-tooling">AI Tooling</li>
+              <li data-filter=".filter-product">Product</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-robotics">
+            <div class="portfolio-wrap">
+              <img src="assets/img/projects/reward-hacking.svg" class="img-fluid" alt="Physics-Blind Reward Hacking">
+              <span class="badge-pill">Research</span>
+              <div class="portfolio-links">
+                <a href="https://github.com/ZichenYuan/sunny.0/raw/main/assets/cs224r_final_report.pdf" target="_blank" rel="noopener" title="Read the paper"><i class="bx bx-file"></i></a>
+              </div>
+            </div>
+            <div class="caption"><b>Physics-Blind Reward Hacking</b> - <i>Stanford CS224R research (with Sophia Huang) on whether LLM-generated reward functions induce unsafe robotic manipulation — Eureka-style reward generation + SAC+HER on MuJoCo Fetch tasks. FetchSlide success 14% → 64%; Pick-and-Place 52% → 93%</i></div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-robotics">
+            <div class="portfolio-wrap">
+              <img src="assets/img/projects/edge-safety.svg" class="img-fluid" alt="Edge Safety Monitor for VLA Policies">
+              <span class="badge-pill">In progress</span>
+              <div class="portfolio-links">
+                <a href="https://github.com/ZichenYuan" target="_blank" rel="noopener" title="GitHub"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+            <div class="caption"><b>Edge Safety Monitor for VLA Policies</b> - <i>A lightweight safety "sidecar" that screens a vision-language-action robot policy's proposed actions for hazards on a Jetson Orin Nano (≤3B quantized models), escalating ambiguous cases to a cloud model</i></div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-vision">
+            <div class="portfolio-wrap">
+              <img src="assets/img/projects/mixedviewdiff.svg" class="img-fluid" alt="MixedViewDiff">
+              <span class="badge-pill">Research</span>
+              <div class="portfolio-links">
+                <a href="https://www.notion.so/MixedViewDiff-A-Mixed-View-based-Diffusion-Model-for-Panorama-Synthesis-2f1d742c7b3b805b9191eda450d2c7a8" target="_blank" rel="noopener" title="Read more"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="caption"><b>MixedViewDiff</b> - <i>A mixed-view diffusion model for high-fidelity panorama synthesis — ControlNet conditioning and cross-attention, trained on CUDA</i></div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-vision filter-product">
+            <div class="portfolio-wrap">
+              <img src="assets/img/projects/3dreal.svg" class="img-fluid" alt="3dReal">
+              <span class="badge-pill">🏆 Grand Prize</span>
+              <div class="portfolio-links">
+                <a href="https://devpost.com/software/3dreal" target="_blank" rel="noopener" title="View on Devpost"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="caption"><b>3dReal - Stanford TreeHacks 2024</b> - <i>BeReal in 3D — capture moments as immersive NeRF scenes rendered from video, viewable on iOS with AR. Grand Prize winner</i></div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-robotics">
+            <div class="portfolio-wrap">
+              <img src="assets/img/projects/ramp-merging.svg" class="img-fluid" alt="Autonomous Ramp-Merging">
+              <span class="badge-pill">Research</span>
+              <div class="portfolio-links">
+                <a href="https://www.notion.so/Cooperation-in-Autonomous-Ramp-Merging-Effects-of-Traffic-Cooperation-Ratio-on-DQN-Agent-Robustness-2f1d742c7b3b8099ab57daf97f1eb997" target="_blank" rel="noopener" title="Read more"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="caption"><b>Autonomous Ramp-Merging</b> - <i>A Deep-RL study on how traffic cooperation ratio affects DQN-agent robustness in autonomous ramp-merging scenarios</i></div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-product">
+            <div class="portfolio-wrap">
+              <img src="assets/img/projects/paw-sonality.svg" class="img-fluid" alt="Paw-sonality">
+              <span class="badge-pill">Featured</span>
+              <div class="portfolio-links">
+                <a href="https://paw-sonality.vercel.app" target="_blank" rel="noopener" title="Try it"><i class="bx bx-link-external"></i></a>
+              </div>
+            </div>
+            <div class="caption"><b>Paw-sonality</b> - <i>Upload a photo of your cat and get a personality profile powered by vision-language models. Featured on Product Hunt</i></div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-vision">
+            <div class="portfolio-wrap">
+              <img src="assets/img/projects/rewind.svg" class="img-fluid" alt="Rewind">
+              <span class="badge-pill">🏆 3rd Place</span>
+              <div class="portfolio-links">
+                <a href="https://github.com/ZichenYuan" target="_blank" rel="noopener" title="GitHub"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+            <div class="caption"><b>Rewind - HackMIT 2024</b> - <i>A memory gallery in 3D — relive moments through 3D Gaussian Splatting with vector-search retrieval. 3rd Place</i></div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-tooling">
+            <div class="portfolio-wrap">
+              <img src="assets/img/projects/secretlint.svg" class="img-fluid" alt="Secretlint">
+              <span class="badge-pill">OSS</span>
+              <div class="portfolio-links">
+                <a href="https://github.com/ZichenYuan/secretlint" target="_blank" rel="noopener" title="View code"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+            <div class="caption"><b>Secretlint</b> - <i>A lightweight Git pre-commit hook that scans for API keys, tokens &amp; credentials before they reach your repo</i></div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-tooling">
+            <div class="portfolio-wrap">
+              <img src="assets/img/projects/learn-mode.svg" class="img-fluid" alt="Learn Mode">
+              <span class="badge-pill">OSS</span>
+              <div class="portfolio-links">
+                <a href="https://github.com/ZichenYuan/vibecode_learn" target="_blank" rel="noopener" title="View code"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+            <div class="caption"><b>Learn Mode</b> - <i>A Claude Code skill that turns every AI coding session into a learning opportunity — explaining the concepts behind the code and building a spaced-repetition knowledge base grounded in cognitive science</i></div>
+          </div>
+
+        </div>
+
+        <div class="text-center" data-aos="fade-up">
+          <a class="more-link" href="https://github.com/ZichenYuan" target="_blank" rel="noopener">More on GitHub <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+
+      </div>
+    </section><!-- End Projects Section -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <p>Have a hard problem? <a href="mailto:hello@sunnyyuan.dev">Let's talk.</a></p>
+        <div class="social">
+          <a href="mailto:hello@sunnyyuan.dev">Email</a>
+          <a href="https://github.com/ZichenYuan" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/sunny-yuan-1ae/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/ZCY2003" target="_blank" rel="noopener">X / Twitter</a>
+        </div>
+        <p class="fine">© 2026 Sunny Yuan · sunnyyuan.dev · Off the clock: rower, on the water in <b>Seattle</b> ⌁</p>
+        <p class="fine">Layout adapted from <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">iPortfolio by BootstrapMade</a></p>
+      </div>
+    </footer><!-- End Footer -->
+
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS (cdnjs) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

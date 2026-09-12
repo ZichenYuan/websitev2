@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1f3a"/><stop offset="1" stop-color="#6a5acd"/></linearGradient>
+  <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="1"/></pattern>
+  <radialGradient id="glow" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#g)"/>
+<rect width="1600" height="900" fill="url(#grid)"/>
+<rect width="1600" height="900" fill="url(#glow)"/>
+<text x="90" y="170" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="54" fill="#fff" fill-opacity=".55" letter-spacing="6">002</text>
+<g transform="translate(1180 420) scale(1.7)" fill="#fff" fill-opacity=".9"><path d="M75 -110 L160 -80 V-10 C160 50 120 95 75 115 C30 95 -10 50 -10 -10 V-80 Z"/><path d="M40 0 L65 25 L115 -30" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="90" y="560" font-family="Poppins, Raleway, Helvetica, Arial, sans-serif" font-weight="700" font-size="84" fill="#fff">Edge Safety Monitor</text><text x="90" y="656" font-family="Poppins, Raleway, Helvetica, Arial, sans-serif" font-weight="700" font-size="84" fill="#fff">for VLA Policies</text>
+<text x="90" y="802" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="34" fill="#fff" fill-opacity=".8" letter-spacing="4">PHYSICAL AI · JETSON ORIN NANO</text>
+</svg>

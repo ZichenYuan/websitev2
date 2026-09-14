@@ -4,6 +4,22 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      var theme = stored || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light');
+      root.setAttribute('data-theme', theme);
+      document.addEventListener('click', function (e) {
+        var btn = e.target.closest && e.target.closest('#theme-toggle');
+        if (!btn) return;
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    })();
+  </script>
 
   <title>Sunny Yuan — ML Systems Engineer</title>
   <meta name="description" content="Sunny Yuan — software engineer building the GPU/accelerator substrate AI runs on. Kubernetes, Go, GPU systems, and reinforcement learning — now pushing into Physical AI, robotics, and edge computing.">
@@ -66,10 +82,10 @@
         </ul>
       </nav>
 
-      <div class="credits">
-        Designed by<br>
-        <a href="https://github.com/ZichenYuan" target="_blank" rel="noopener">Sunny Yuan</a>
-      </div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">
+        <i class="bx bx-moon icon-moon"></i>
+        <i class="bx bx-sun icon-sun"></i>
+      </button>
 
     </div>
   </header><!-- End Header -->

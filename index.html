@@ -173,6 +173,7 @@
               <div class="where">Hybrid-cloud infrastructure on the Edge (Kubernetes) · Redmond, WA</div>
               <ul>
                 <li>Drove <b>GPU/accelerator enablement end-to-end</b> for a managed Kubernetes platform — Linux drivers, <b>PCI passthrough (VFIO/IOMMU)</b>, the K8s device-plugin stack, and the NVIDIA GPU Operator — validated against a live <b>vLLM</b> inference workload.</li>
+                <li>Most recently: engineered the <b>guest ↔ host network proxy</b> path for <b>Azure Local disconnected operation</b> — forward-proxy egress with allow-lists and HTTPS_PROXY-style routing across the companion-VM boundary so control-plane and workload traffic still flows in fully <b>air-gapped</b> deployments; debugged the DNS, SSH-over-WebSocket and proxy-chain failures that come with it.</li>
                 <li>Built Go control-plane features on <b>controller-runtime</b>: admission/validation webhooks, GPU capacity gating, and hardware-aware scheduling.</li>
                 <li>Led cluster <b>upgrade-reliability</b> and <b>CI/CD release-safety</b> automation for a platform supporting carrier scale (100M+ subscribers).</li>
                 <li>Hardened the GPU <b>container-image supply chain</b> end-to-end — CVE scanning &amp; remediation, <b>signed / SBOM-attested images</b>, base-image patching, and mirroring into a compliant internal registry; ran on-call incident response and built reusable triage tooling.</li>
@@ -186,6 +187,23 @@
 
           <div class="resume-item">
             <div class="card-side" data-aos="fade-right">
+              <h4>Open-Source Contributor</h4>
+              <h5 class="org">MatrAIx · Agent PersonaBench</h5>
+              <span class="date">2026 – Present</span>
+              <div class="where">Open-source community · persona-driven agent simulation &amp; evaluation</div>
+              <ul>
+                <li>Contribute to <b>Agent PersonaBench</b>, MatrAIx's open benchmark for <b>persona adherence</b> — whether an LLM agent playing a persona actually behaves the way its attributes imply — across survey, chatbot, web and app environments.</li>
+                <li>Authored <b>8 merged PRs</b> adding <b>200+ evaluation tasks</b>: single-attribute suites (linguistic style, routine &amp; attention, skills/tools power-user), multi-attribute taste / media / food-and-sport preference suites, and crossed-trait waves — each verified end to end.</li>
+                <li>Hardened task validation: fail-closed checks on question/option IDs, moved ground truth off served pages, and cut a random-pass rate from <b>21% → 7%</b>.</li>
+              </ul>
+            </div>
+            <div class="art-side" data-aos="fade-left">
+              <div class="org-art purple" data-label="Open source"><i class="bx bx-network-chart"></i></div>
+            </div>
+          </div>
+
+          <div class="resume-item flip">
+            <div class="card-side" data-aos="fade-left">
               <h4>Software Engineer Intern</h4>
               <h5 class="org">Microsoft · Azure Edge &amp; Platform</h5>
               <span class="date">May 2024 – Aug 2024</span>
@@ -195,59 +213,60 @@
                 <li>Integrated observability with <b>OpenTelemetry</b> and <b>Prometheus</b> to improve system visibility and reliability.</li>
               </ul>
             </div>
-            <div class="art-side" data-aos="fade-left">
-              <div class="org-art" data-label="Azure Relay Bridge"><i class="bx bx-cloud"></i></div>
-            </div>
-          </div>
-
-          <div class="resume-item flip">
-            <div class="card-side" data-aos="fade-left">
-              <h4>Team Lead — AI &amp; Robotics</h4>
-              <h5 class="org">WashU Robotics Club</h5>
-              <span class="date">2023 – 2024</span>
-              <div class="where">Reinforcement learning · computer vision</div>
-              <ul>
-                <li>Led the AI &amp; Robotics team, driving projects in <b>reinforcement learning</b> and <b>computer vision</b> — early grounding for my RL focus.</li>
-              </ul>
-            </div>
             <div class="art-side" data-aos="fade-right">
-              <div class="org-art ember" data-label="Robotics"><i class="bx bx-bot"></i></div>
+              <div class="org-art" data-label="Azure Relay Bridge"><i class="bx bx-cloud"></i></div>
             </div>
           </div>
 
           <div class="resume-item">
             <div class="card-side" data-aos="fade-right">
-              <h4>Teaching Assistant</h4>
+              <h4>Team Lead — AI &amp; Robotics</h4>
+              <h5 class="org">WashU Robotics Club</h5>
+              <span class="date">2023 – 2024</span>
+              <div class="where">Quadruped robots · reinforcement learning · computer vision</div>
+              <ul>
+                <li>Led the AI &amp; Robotics team building a <b>quadruped robot</b>: trained locomotion policies with <b>reinforcement learning</b> in <b>NVIDIA Isaac Gym</b> (GPU-parallel simulation) and ran the team's <b>computer vision</b> projects — early grounding for my RL and Physical-AI focus.</li>
+              </ul>
+            </div>
+            <div class="art-side" data-aos="fade-left">
+              <div class="org-art ember" data-label="Robotics"><i class="bx bx-bot"></i></div>
+            </div>
+          </div>
+
+          <div class="resume-item flip">
+            <div class="card-side" data-aos="fade-left">
+              <h4>Teaching Assistant &amp; Researcher</h4>
               <h5 class="org">Washington University in St. Louis</h5>
               <span class="date">2023 – 2024</span>
               <div class="where">CSE department · part-time</div>
               <ul>
                 <li>TA for <b>CSE 247</b> (Data Structures &amp; Algorithms), <b>CSE 231</b> (Parallel &amp; Concurrent Programming), and <b>CSE 417</b> (Machine Learning).</li>
-              </ul>
-            </div>
-            <div class="art-side" data-aos="fade-left">
-              <div class="org-art green" data-label="Teaching"><i class="bx bx-chalkboard"></i></div>
-            </div>
-          </div>
-
-          <div class="resume-item flip">
-            <div class="card-side" data-aos="fade-left">
-              <h4>Software Engineer Intern</h4>
-              <h5 class="org">Less Annoying CRM</h5>
-              <span class="date">May 2023 – Aug 2023</span>
-              <div class="where">Full-stack · CI/CD · MySQL</div>
-              <ul>
-                <li>Built and shipped product features end-to-end, working across <b>CI/CD</b> pipelines and <b>MySQL</b>-backed services.</li>
-                <li>Designed API endpoints and optimized database queries for performance and scalability.</li>
+                <li>Research: built and evaluated <b>retrieval-augmented generation (RAG)</b> pipelines and an <b>LLM agent framework</b> for <b>medical-code autocoding</b> — assigning billing/diagnosis codes automatically from clinical documentation.</li>
               </ul>
             </div>
             <div class="art-side" data-aos="fade-right">
-              <div class="org-art purple" data-label="Full-stack"><i class="bx bx-code-alt"></i></div>
+              <div class="org-art green" data-label="Teaching &amp; research"><i class="bx bx-chalkboard"></i></div>
             </div>
           </div>
 
           <div class="resume-item">
             <div class="card-side" data-aos="fade-right">
+              <h4>Full-Stack Software Engineer Intern</h4>
+              <h5 class="org">Less Annoying CRM</h5>
+              <span class="date">May 2023 – Aug 2023</span>
+              <div class="where">RESTful APIs · MySQL · AWS S3 · St. Louis, MO</div>
+              <ul>
+                <li>Led the research and implementation of <b>RESTful API endpoints</b> for the CRM's email and attachment tools — designing the JSON contracts and wiring them across <b>10+ MySQL databases</b> and <b>AWS S3</b> attachment storage.</li>
+                <li>Shipped to <b>26,000+ users</b>, lifting user satisfaction <b>25%</b>; optimized the backing database queries for performance and scalability.</li>
+              </ul>
+            </div>
+            <div class="art-side" data-aos="fade-left">
+              <div class="org-art purple" data-label="API design"><i class="bx bx-code-alt"></i></div>
+            </div>
+          </div>
+
+          <div class="resume-item flip">
+            <div class="card-side" data-aos="fade-left">
               <h4>Product Intern</h4>
               <h5 class="org">MarginNote</h5>
               <span class="date">2021</span>
@@ -256,7 +275,7 @@
                 <li>Contributed to product management and cross-functional delivery for a study-focused e-reader (annotation, mind-mapping, flashcards).</li>
               </ul>
             </div>
-            <div class="art-side" data-aos="fade-left">
+            <div class="art-side" data-aos="fade-right">
               <div class="org-art ember" data-label="Product"><i class="bx bx-book-reader"></i></div>
             </div>
           </div>

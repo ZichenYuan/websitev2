@@ -102,7 +102,7 @@
         <div class="intro" data-aos="fade-up">
           <p>Hi there! I'm a <b>builder at heart</b> — happiest turning hard problems into things that actually work. I love going deep, learning fast, and making stuff at the <b>frontier of AI</b> — lately that means <b>robots and the edge hardware they run on</b>.</p>
           <p>I'm a software engineer at <b>Microsoft Azure</b>, where I ship GPU/accelerator enablement for a managed Kubernetes platform running at carrier scale — the kind of low-level systems work that lets customers run real <b>AI workloads</b>.</p>
-          <p>My edge is range: I work from <b>Linux kernel drivers and PCI passthrough</b> up through Go control planes and Kubernetes operators — and I round it out with hands-on <b>reinforcement learning</b> research, including a Stanford study on <b>reward hacking in robotic manipulation</b>. That combination is pulling me toward <b>Physical AI and edge computing</b> — extending the RL work into real robot hardware, and bringing the same systems instincts I use for GPU infrastructure to bear on robots and the constrained hardware they run on. You can see what I've built in the <a href="#portfolio" class="scrollto">projects section</a>.</p>
+          <p>My edge is range — from <b>Linux drivers and GPU passthrough</b> up through Go control planes and Kubernetes operators, rounded out with hands-on <b>reinforcement learning</b> and <b>LLM-agent</b> research. Next: bringing those systems instincts to <b>Physical AI</b> and the constrained hardware robots run on. You can see what I've built in the <a href="#portfolio" class="scrollto">projects section</a>.</p>
           <p>Status: <b>open to what's next.</b></p>
         </div>
 
@@ -122,8 +122,8 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-chip"></i></div>
               <div>
-                <h4>Infrastructure</h4>
-                <p>GPU/accelerator enablement end-to-end: Linux drivers, PCI passthrough (VFIO/IOMMU), the Kubernetes device-plugin stack, and Go control planes on controller-runtime — validated against live vLLM inference workloads.</p>
+                <h4>AI Infrastructure</h4>
+                <p>The substrate AI runs on: GPU/accelerator enablement on Kubernetes (drivers, PCI passthrough, device plugins, NVIDIA GPU Operator), LLM inference serving with vLLM — OpenAI-compatible endpoints, continuous batching, KV cache — edge model serving on constrained hardware, and the Go control planes and GPU-aware scheduling that tie it together.</p>
               </div>
             </div>
           </div>
@@ -187,18 +187,19 @@
 
           <div class="resume-item">
             <div class="card-side" data-aos="fade-right">
-              <h4>Open-Source Contributor</h4>
-              <h5 class="org">MatrAIx · Agent PersonaBench</h5>
+              <h4>Open-Source Contributor — LLM &amp; Agent Evaluation</h4>
+              <h5 class="org">MatrAIx · Agent PersonaBench &amp; MatrAIx in the Wild</h5>
               <span class="date">2026 – Present</span>
-              <div class="where">Open-source community · persona-driven agent simulation &amp; evaluation</div>
+              <div class="where">Persona simulation · agent benchmarks · computer-use agents (CUA)</div>
               <ul>
-                <li>Contribute to <b>Agent PersonaBench</b>, MatrAIx's open benchmark for <b>persona adherence</b> — whether an LLM agent playing a persona actually behaves the way its attributes imply — across survey, chatbot, web and app environments.</li>
-                <li>Authored <b>8 merged PRs</b> adding <b>200+ evaluation tasks</b>: single-attribute suites (linguistic style, routine &amp; attention, skills/tools power-user), multi-attribute taste / media / food-and-sport preference suites, and crossed-trait waves — each verified end to end.</li>
-                <li>Hardened task validation: fail-closed checks on question/option IDs, moved ground truth off served pages, and cut a random-pass rate from <b>21% → 7%</b>.</li>
+                <li>Build <b>LLM and agent evaluation</b> for MatrAIx, a population-scale <b>persona-simulation</b> platform that instantiates sampled personas as LLM agents and runs them through reproducible tasks across survey, chatbot, web and native app environments.</li>
+                <li>Design and author <b>benchmark tasks</b> for <b>Agent PersonaBench</b> — 8 merged PRs, 200+ tasks measuring <b>persona adherence</b> one attribute at a time (single-attribute, multi-attribute and crossed-trait suites), including <b>computer-use agent (CUA)</b> tasks where the agent has to act through real web and desktop/mobile app UIs.</li>
+                <li>Harden the evaluation harness: fail-closed validation of task specs, ground truth kept off the pages agents see, and random-pass rates cut from <b>21% → 7%</b> so scores reflect behavior, not chance.</li>
+                <li>Also contributing to <b>MatrAIx in the Wild</b> — case studies that apply persona-driven agent simulation to evaluate real products before deployment.</li>
               </ul>
             </div>
             <div class="art-side" data-aos="fade-left">
-              <div class="org-art purple" data-label="Open source"><i class="bx bx-network-chart"></i></div>
+              <div class="org-art purple" data-label="LLM &amp; agent eval"><i class="bx bx-network-chart"></i></div>
             </div>
           </div>
 
